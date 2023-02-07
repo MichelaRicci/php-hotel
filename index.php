@@ -38,8 +38,6 @@
 
 ];
 
-var_dump($hotels)
-
 ?>
 
 
@@ -56,6 +54,20 @@ var_dump($hotels)
 
 </head>
 <body>
+
+
+<?php foreach ($hotels as $hotel) { ?>
+
+<?= $hotel['name']; ?>
+<?= $hotel['description']; ?>
+<?= $hotel['parking'] == true ? 'Sì' : 'No'; ?>
+<?= $hotel['vote']; ?>
+<?= $hotel['distance_to_center']; ?>
+
+
+<?php } ?>
+
+
 
 
     
