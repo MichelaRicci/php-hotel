@@ -55,17 +55,35 @@
 </head>
 <body>
 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrizione</th>
+                <th>Parcheggio</th>
+                <th>Voto</th>
+                <th>Distanza del centro</th>
+            </tr>
+        </thead>
+        <tbody>
 
-<?php foreach ($hotels as $hotel) { ?>
+            <?php foreach ($hotels as $hotel) { ?>
 
-<?= $hotel['name']; ?>
-<?= $hotel['description']; ?>
-<?= $hotel['parking'] == true ? 'Sì' : 'No'; ?>
-<?= $hotel['vote']; ?>
-<?= $hotel['distance_to_center']; ?>
+            <tr>
+                <td><?= $hotel['name']; ?></td>
+                <td><?= $hotel['description']; ?></td>
+                <td><?= $hotel['parking'] == true ? 'Sì' : 'No'; ?></td>
+                <td><?= $hotel['vote']; ?></td>
+                <td><?= $hotel['distance_to_center']; ?></td>
+            </tr>
 
 
-<?php } ?>
+            <?php } ?>
+
+        </tbody>
+    </table>
+
+
 
 
 
